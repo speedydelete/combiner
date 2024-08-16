@@ -1,3 +1,18 @@
 {
-    "FQU": "up quark"
+    "object.up_quark.name": "Up quark",
+    "object.down_quark.name": "Down quark",
+    "object.strange_quark.name": "Strange quark",
+    "object.charm_quark.name": "Charm quark",
+    "object.top_quark.name": "Top quark",
+    "object.bottom_quark.name": "Bottom quark",
+    "object.electron.name": "Electron",
+    "object.muon.name": "Muon",
+    "object.tau.name": "Tau",
+    "object.electron_neutrino.name": "Electron neutrino",
+    "object.muon_neutrino.name": "Muon neutrino",
+    "object.tau_neutrino.name": "Tau neutrino",
+    "object.gluon.name": "Gluon",
+    "object.photon.name": "Photon",
+    "object.z_boson.name": "Z boson",
+    "object.w_boson.name": "W boson"
 }
