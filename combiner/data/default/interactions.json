@@ -1,0 +1,10 @@
+{
+    "up_quark": {
+        "half_life": 0,
+        "decay": [[1, "down_quark", "!electron", "electron_neutrino"]]
+    },
+    "down_quark": {
+        "half_life": 0,
+        "decay": [[1, "up_quark", "electron", "!electron_neutrino"]]
+    }
+}

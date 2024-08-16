@@ -1,6 +1,16 @@
 {
+    "*": {
+        "mass": "gram",
+        "charge": "ampere",
+        "spin": "h_bar"
+    },
     "subatomic": {
-        "mass": "1.78266192e-27",
-        "charge": "1.60217733e-19"
+        "mass": "MeV/c^2",
+        "charge": "electron"
+    },
+    "quark": {
+        "!ind": {
+            "color": ["", "red", "green", "blue"]
+        }
     }
 }
