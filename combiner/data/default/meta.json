@@ -1,0 +1,8 @@
+{
+    "name": "default",
+    "desc": "the default datapack",
+    "version": {
+        "min": 0,
+        "max": 2147483647
+    }
+}
