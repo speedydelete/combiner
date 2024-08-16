@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            const USE_WRECKED_2 = true;
+            let runPython;let _wrecked2RunJS=function(x){eval(x);};
+            if(USE_WRECKED_2){onerror=(a,b,c,d,e)=>{window.opener.postMessage(e,"*");};runPython=function(c){c=c.split("\n");let d=[];let a=true;for(const l of c){if(l.includes("#<nowrecked2>")){a=false;}if(a){d.push(l);if(l=="#</nowrecked2>"){a=true;}}}console.log(d.join("\n"));window.opener.postMessage(d.join("\n"),"*");};onmessage=function(e){if(e.source==window.opener){let d=e.data;if(d==undefined){return;}else{eval(String(d));}}}}
+            else{let s=document.createElement("script");s.onload=()=>{loadPyodide().then((p)=>{runPython=(c)=>{p.runPython(c);}});};s.src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js";document.head.appendChild(s);onerror=(a,b,c,d,e)=>{Array.from(document.body.querySelectorAll("*")).forEach((x)=>{x.remove();});document.write(`<div style="color:red;position:absolute;top:0;bottom:0;left:0;right:0;padding:10px;font-family:'Courier New',Courier,monospace;">`+("ERROR (please report):\n\n\n"+e.stack.toString()).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll(">", "&gt;").replaceAll("'", "&#039;").replaceAll(" ", "&nbsp;").replaceAll("\n", "<br>")+"</div>");}}
+            runPython(`import js as _wrecked2_window\ndef run_js(x):\n    _wrecked2_window._wrecked2RunJS(x)\ndef print(*a,s=' ',e='\\n'):\n    m=(str(s).join([str(x) for x in a])+str(e)).replace('\\\\', '\\\\\\\\').replace('\\n', '\\\\n').replace('"', '\\\\"')\n    run_js(f'alert("{m}")')\nimport pyodide.ffi.wrappers as _wrecked2_pfw\ndef add_event_listener(e,v,f):\n    def w():\n        f(_wrecked2_window._wrecked2Event)\n    _wrecked2_pfw.add_event_listener(e,v,w)\nset_interval=_wrecked2_pfw.set_interval\nclear_interval=_wrecked2_pfw.clear_interval`);
+            runPython(`from types import ModuleType as _wrecked2_ModuleType\nimport sys as _wrecked2_sys`);function addPythonModule(name, code){runPython(`_wrecked2_module_${name}=_wrecked2_ModuleType('${name}')\nexec("""${code}""",_wrecked2_module_${name}.__dict__)\n_wrecked2_sys.modules['${name}']=_wrecked2_module_${name}`)}async function runPythonFromUrl(url){runPython(await(await fetch(url)).text())}
+        </script>
+    </head>
+    <body>
+        <script>
+            runPythonFromUrl("main.py");
+        </script>
+    </body>
+</html>
